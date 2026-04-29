@@ -34,21 +34,21 @@ export function DangerZone(): ReactNode {
   };
 
   return (
-    <section className="space-y-3 rounded-xl border border-status-error/30 p-3">
-      <h3 className="text-sm font-semibold text-status-error">Danger zone</h3>
-      <p className="text-xs text-text-muted">
-        Type <code className="rounded bg-bg-deep px-1 font-mono">{CONFIRM_PHRASE}</code> to enable.
+    <section className="space-y-3 rounded-xl border border-error/30 p-3">
+      <h3 className="text-sm font-semibold text-error">Danger zone</h3>
+      <p className="text-xs text-fg-muted">
+        Type <code className="rounded bg-bg px-1 font-mono">{CONFIRM_PHRASE}</code> to enable.
       </p>
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="block w-full rounded-md border border-border-faint bg-bg-deep/60 px-2.5 py-1.5 font-mono text-xs text-text-primary outline-none focus:border-status-error focus-visible:ring-2 focus-visible:ring-status-error"
+        className="block w-full rounded-md border border-border bg-bg/60 px-2.5 py-1.5 font-mono text-xs text-fg outline-none focus:border-error focus-visible:ring-2 focus-visible:ring-error"
       />
       <Button variant="danger" size="sm" disabled={busy || text !== CONFIRM_PHRASE} onClick={wipe}>
         {busy ? "Wiping…" : "Delete all credentials"}
       </Button>
-      {msg ? <p className="text-xs text-text-muted">{msg}</p> : null}
+      {msg ? <p className="text-xs text-fg-muted">{msg}</p> : null}
     </section>
   );
 }

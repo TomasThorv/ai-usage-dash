@@ -10,15 +10,15 @@ interface MasterLiveIndicatorProps {
 }
 
 const META: Record<MasterStatus, { label: string; dot: string; pulse: boolean }> = {
-  live: { label: "Live", dot: "bg-accent-cyan", pulse: true },
-  partial: { label: "Partial", dot: "bg-status-warn", pulse: false },
-  stale: { label: "Stale", dot: "bg-status-stale", pulse: false },
+  live: { label: "Live", dot: "bg-accent", pulse: true },
+  partial: { label: "Partial", dot: "bg-warn", pulse: false },
+  stale: { label: "Stale", dot: "bg-stale", pulse: false },
 };
 
 export function MasterLiveIndicator({ status }: MasterLiveIndicatorProps): ReactNode {
   const meta = META[status];
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-border-faint bg-surface-glass px-2.5 py-1 text-xs text-text-muted">
+    <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-2.5 py-1 text-xs text-fg-muted">
       <span className="relative inline-flex">
         <span className={cn("block h-2 w-2 rounded-full", meta.dot)} />
         {meta.pulse ? (

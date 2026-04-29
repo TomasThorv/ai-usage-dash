@@ -13,8 +13,8 @@ export function EmptyState(): ReactNode {
       >
         <defs>
           <linearGradient id="empty-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="var(--color-accent-cyan)" />
-            <stop offset="100%" stopColor="var(--color-accent-violet)" />
+            <stop offset="0%" stopColor="var(--color-accent)" />
+            <stop offset="100%" stopColor="var(--color-accent)" />
           </linearGradient>
         </defs>
         <circle
@@ -41,8 +41,8 @@ export function EmptyState(): ReactNode {
           fill="url(#empty-grad)"
         />
       </svg>
-      <h2 className="mt-6 text-2xl font-semibold text-text-primary">No providers connected</h2>
-      <p className="mt-2 text-sm text-text-muted">
+      <h2 className="mt-6 text-2xl font-semibold text-fg">No providers connected</h2>
+      <p className="mt-2 text-sm text-fg-muted">
         Connect your first provider to start streaming live usage and quota data.
       </p>
       <div className="mt-6">

@@ -24,8 +24,8 @@ export function PollingControl({ providers }: PollingControlProps): ReactNode {
 
   return (
     <section className="space-y-3">
-      <h3 className="text-sm font-semibold text-text-primary">Polling intervals</h3>
-      <p className="text-xs text-text-muted">
+      <h3 className="text-sm font-semibold text-fg">Polling intervals</h3>
+      <p className="text-xs text-fg-muted">
         Local-only. Stored client-side; takes effect on next refresh.
       </p>
       <ul className="space-y-3">
@@ -34,8 +34,8 @@ export function PollingControl({ providers }: PollingControlProps): ReactNode {
           return (
             <li key={p.id} className="space-y-1.5">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-text-primary">{p.displayName}</span>
-                <span className="font-mono tabular-nums text-text-muted">{value}s</span>
+                <span className="text-fg">{p.displayName}</span>
+                <span className="font-mono tabular-nums text-fg-muted">{value}s</span>
               </div>
               <input
                 type="range"
@@ -46,7 +46,7 @@ export function PollingControl({ providers }: PollingControlProps): ReactNode {
                 onChange={(e) =>
                   setValues((s) => ({ ...s, [p.id]: Number.parseInt(e.target.value, 10) }))
                 }
-                className="w-full accent-[var(--color-accent-cyan)]"
+                className="w-full accent-[var(--color-accent)]"
                 aria-label={`${p.displayName} poll interval`}
               />
             </li>

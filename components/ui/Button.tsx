@@ -14,11 +14,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    "bg-gradient-to-r from-accent-cyan/90 to-accent-violet/90 text-bg-deeper hover:brightness-110 disabled:opacity-50 shadow-[0_0_24px_rgba(94,234,212,0.25)]",
+    "bg-accent text-bg hover:brightness-110 disabled:opacity-50",
   ghost:
-    "bg-transparent text-text-primary border border-border-faint hover:bg-surface-glass-strong disabled:opacity-50",
+    "bg-transparent text-fg border border-border hover:bg-surface-hover disabled:opacity-50",
   danger:
-    "bg-status-error/15 text-status-error border border-status-error/40 hover:bg-status-error/25 disabled:opacity-50",
+    "bg-error/15 text-error border border-error/40 hover:bg-error/25 disabled:opacity-50",
 };
 
 const SIZES: Record<Size, string> = {
@@ -36,7 +36,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       type={type}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors duration-150",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
         VARIANTS[variant],
         SIZES[size],
         className,

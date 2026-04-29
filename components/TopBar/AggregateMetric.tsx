@@ -19,12 +19,12 @@ export function AggregateMetric({
 }: AggregateMetricProps): ReactNode {
   return (
     <div className="flex flex-col leading-tight">
-      <span className="text-[10px] uppercase tracking-wide text-text-faint">{label}</span>
+      <span className="text-[10px] uppercase tracking-wide text-fg-faint">{label}</span>
       <CountUp
         value={value}
         {...(format ? { format } : {})}
         mono={mono}
-        className={cn("text-sm font-semibold text-text-primary")}
+        className={cn("text-sm font-semibold text-fg")}
       />
     </div>
   );

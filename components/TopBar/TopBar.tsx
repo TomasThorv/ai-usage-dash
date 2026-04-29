@@ -32,17 +32,17 @@ export function TopBar({
   providers,
 }: TopBarProps): ReactNode {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 h-14 border-b border-border-faint bg-bg-deeper/60 backdrop-blur-[24px]">
+    <header className="fixed inset-x-0 top-0 z-40 h-14 border-b border-border bg-bg/60 backdrop-blur-[24px]">
       <div className="mx-auto flex h-full max-w-[1600px] items-center gap-4 px-4 sm:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper"
+          className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         >
           <span
             aria-hidden="true"
-            className="block h-6 w-6 rounded-md bg-gradient-to-br from-accent-cyan to-accent-violet"
+            className="block h-6 w-6 rounded-md bg-accent"
           />
-          <span className="hidden text-sm font-semibold tracking-tight text-text-primary sm:inline">
+          <span className="hidden text-sm font-semibold tracking-tight text-fg sm:inline">
             AI Usage
           </span>
         </Link>

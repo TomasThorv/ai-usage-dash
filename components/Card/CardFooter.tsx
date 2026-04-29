@@ -20,14 +20,14 @@ export function CardFooter({
   hasBreakdown = true,
 }: CardFooterProps): ReactNode {
   return (
-    <div className="mt-4 flex items-center justify-between border-t border-border-faint pt-3">
+    <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
       <div className="flex items-baseline gap-2">
-        <span className="text-[11px] uppercase tracking-wide text-text-faint">Cost</span>
+        <span className="text-[11px] uppercase tracking-wide text-fg-faint">Cost</span>
         <CountUp
           value={costUsd}
           mono
           format={formatUsd}
-          className="text-base font-semibold text-text-primary"
+          className="text-base font-semibold text-fg"
         />
       </div>
       {hasBreakdown ? (
@@ -37,9 +37,9 @@ export function CardFooter({
           aria-expanded={expanded}
           aria-label={expanded ? "Collapse breakdown" : "Expand breakdown"}
           className={cn(
-            "inline-flex h-7 items-center gap-1 rounded-full px-2 text-xs text-text-muted",
-            "hover:bg-surface-glass-strong hover:text-text-primary",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper",
+            "inline-flex h-7 items-center gap-1 rounded-full px-2 text-xs text-fg-muted",
+            "hover:bg-surface-hover hover:text-fg",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
           )}
         >
           <span>{expanded ? "Hide" : "Models"}</span>

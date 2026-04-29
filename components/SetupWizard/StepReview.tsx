@@ -16,8 +16,8 @@ export function StepReview({ verified, onBack }: StepReviewProps): ReactNode {
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-lg font-semibold text-text-primary">Ready to go</h2>
-        <p className="mt-1 text-sm text-text-muted">
+        <h2 className="text-lg font-semibold text-fg">Ready to go</h2>
+        <p className="mt-1 text-sm text-fg-muted">
           {verified.length} provider{verified.length === 1 ? "" : "s"} verified.
         </p>
       </div>
@@ -26,14 +26,14 @@ export function StepReview({ verified, onBack }: StepReviewProps): ReactNode {
         {verified.map((id) => (
           <li
             key={id}
-            className="flex items-center gap-2 rounded-lg border border-status-ok/30 bg-status-ok/5 px-3 py-2 text-sm"
+            className="flex items-center gap-2 rounded-lg border border-ok/30 bg-ok/5 px-3 py-2 text-sm"
           >
-            <CheckCircle2 className="h-4 w-4 text-status-ok" aria-hidden="true" />
-            <span className="font-medium text-text-primary capitalize">{id}</span>
+            <CheckCircle2 className="h-4 w-4 text-ok" aria-hidden="true" />
+            <span className="font-medium text-fg capitalize">{id}</span>
           </li>
         ))}
         {verified.length === 0 ? (
-          <li className="text-sm text-text-muted">
+          <li className="text-sm text-fg-muted">
             No providers verified yet — go back and verify at least one.
           </li>
         ) : null}

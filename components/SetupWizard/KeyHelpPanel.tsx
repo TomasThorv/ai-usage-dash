@@ -36,15 +36,15 @@ const HELP: Record<ProviderId, { title: string; body: string; link?: string }> =
 export function KeyHelpPanel({ providerId }: { providerId: ProviderId }): ReactNode {
   const help = HELP[providerId];
   return (
-    <aside className="rounded-xl border border-border-faint bg-bg-deep/40 p-4">
-      <h4 className="text-sm font-semibold text-text-primary">{help.title}</h4>
-      <p className="mt-2 text-xs leading-relaxed text-text-muted">{help.body}</p>
+    <aside className="rounded-xl border border-border bg-bg/40 p-4">
+      <h4 className="text-sm font-semibold text-fg">{help.title}</h4>
+      <p className="mt-2 text-xs leading-relaxed text-fg-muted">{help.body}</p>
       {help.link ? (
         <a
           href={help.link}
           target="_blank"
           rel="noreferrer noopener"
-          className="mt-3 inline-block text-xs text-accent-cyan hover:underline"
+          className="mt-3 inline-block text-xs text-accent hover:underline"
         >
           Open provider console →
         </a>

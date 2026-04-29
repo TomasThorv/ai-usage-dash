@@ -106,8 +106,8 @@ export function StepKeyEntry({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-lg font-semibold text-text-primary">Enter API keys</h2>
-        <p className="mt-1 text-sm text-text-muted">
+        <h2 className="text-lg font-semibold text-fg">Enter API keys</h2>
+        <p className="mt-1 text-sm text-fg-muted">
           Keys are encrypted at rest with libsodium sealed-boxes. Verify each before continuing.
         </p>
       </div>
@@ -121,59 +121,59 @@ export function StepKeyEntry({
               <div
                 key={p.id}
                 className={cn(
-                  "overflow-hidden rounded-xl border bg-surface-glass",
+                  "overflow-hidden rounded-xl border bg-surface",
                   state.kind === "ok"
-                    ? "border-status-ok/40"
+                    ? "border-ok/40"
                     : state.kind === "error"
-                      ? "border-status-error/40"
-                      : "border-border-faint",
+                      ? "border-error/40"
+                      : "border-border",
                 )}
               >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : p.id)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper"
                 >
                   <div className="flex items-center gap-2">
                     {state.kind === "ok" ? (
-                      <CheckCircle2 className="h-4 w-4 text-status-ok" aria-hidden="true" />
+                      <CheckCircle2 className="h-4 w-4 text-ok" aria-hidden="true" />
                     ) : state.kind === "error" ? (
-                      <XCircle className="h-4 w-4 text-status-error" aria-hidden="true" />
+                      <XCircle className="h-4 w-4 text-error" aria-hidden="true" />
                     ) : state.kind === "verifying" || state.kind === "saving" ? (
                       <Loader2
-                        className="h-4 w-4 animate-spin text-text-muted"
+                        className="h-4 w-4 animate-spin text-fg-muted"
                         aria-hidden="true"
                       />
                     ) : (
-                      <span className="block h-2 w-2 rounded-full bg-text-faint" />
+                      <span className="block h-2 w-2 rounded-full bg-fg-faint" />
                     )}
-                    <span className="text-sm font-medium text-text-primary">{p.displayName}</span>
+                    <span className="text-sm font-medium text-fg">{p.displayName}</span>
                   </div>
                   <ChevronDown
                     aria-hidden="true"
                     className={cn(
-                      "h-4 w-4 text-text-muted transition-transform",
+                      "h-4 w-4 text-fg-muted transition-transform",
                       isOpen && "rotate-180",
                     )}
                   />
                 </button>
                 {isOpen ? (
-                  <div className="space-y-3 border-t border-border-faint px-3 py-3">
+                  <div className="space-y-3 border-t border-border px-3 py-3">
                     {p.authFields.map((f) => (
                       <label key={f.key} className="block text-xs">
-                        <span className="text-text-muted">{f.label}</span>
+                        <span className="text-fg-muted">{f.label}</span>
                         <input
                           type={f.secret ? "password" : "text"}
                           placeholder={f.placeholder}
                           value={creds[p.id]?.[f.key] ?? ""}
                           onChange={(e) => setField(p.id, f.key, e.target.value)}
-                          className="mt-1 block w-full rounded-md border border-border-faint bg-bg-deep/60 px-2.5 py-1.5 font-mono text-xs text-text-primary outline-none placeholder:text-text-faint focus:border-accent-cyan/50 focus-visible:ring-2 focus-visible:ring-accent-cyan"
+                          className="mt-1 block w-full rounded-md border border-border bg-bg/60 px-2.5 py-1.5 font-mono text-xs text-fg outline-none placeholder:text-fg-faint focus:border-accent/50 focus-visible:ring-2 focus-visible:ring-accent"
                         />
                       </label>
                     ))}
                     {state.kind === "error" ? (
-                      <p className="text-xs text-status-error">{state.message}</p>
+                      <p className="text-xs text-error">{state.message}</p>
                     ) : null}
                     <div className="flex justify-end">
                       <Button

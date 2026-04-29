@@ -52,12 +52,12 @@ export function Countdown({ resetsAt, onReached, className, prefix }: CountdownP
   }, [resetsAt, valid]);
 
   if (!valid) {
-    return <span className={cn("font-mono tabular-nums text-text-faint", className)}>—</span>;
+    return <span className={cn("font-mono tabular-nums text-fg-faint", className)}>—</span>;
   }
 
   return (
     <span className={cn("font-mono tabular-nums", className)}>
-      {prefix ? <span className="mr-1 text-text-faint">{prefix}</span> : null}
+      {prefix ? <span className="mr-1 text-fg-faint">{prefix}</span> : null}
       {format(seconds)}
     </span>
   );

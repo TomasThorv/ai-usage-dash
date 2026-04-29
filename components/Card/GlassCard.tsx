@@ -14,7 +14,7 @@ interface GlassCardProps {
 }
 
 const BASE =
-  "relative w-full rounded-2xl bg-surface-glass border border-border-faint overflow-hidden";
+  "relative w-full rounded-card bg-surface border border-border overflow-hidden";
 
 const SHADOW =
   "shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_12px_40px_-8px_rgba(0,0,0,0.55),0_2px_8px_rgba(0,0,0,0.4)]";

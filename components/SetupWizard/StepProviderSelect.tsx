@@ -56,16 +56,16 @@ export function StepProviderSelect({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-lg font-semibold text-text-primary">Pick providers</h2>
-        <p className="mt-1 text-sm text-text-muted">
+        <h2 className="text-lg font-semibold text-fg">Pick providers</h2>
+        <p className="mt-1 text-sm text-fg-muted">
           Choose any combination — you can add more later.
         </p>
       </div>
 
       {loading ? (
-        <p className="text-sm text-text-muted">Loading providers…</p>
+        <p className="text-sm text-fg-muted">Loading providers…</p>
       ) : error ? (
-        <p className="text-sm text-status-error">Could not load providers: {error}</p>
+        <p className="text-sm text-error">Could not load providers: {error}</p>
       ) : (
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {providers.map((p) => {
@@ -79,22 +79,22 @@ export function StepProviderSelect({
                 className={cn(
                   "flex items-center justify-between rounded-xl border px-3 py-2.5 text-left transition-colors",
                   isSel
-                    ? "border-accent-cyan/50 bg-accent-cyan/10"
-                    : "border-border-faint bg-surface-glass hover:bg-surface-glass-strong",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper",
+                    ? "border-accent/50 bg-accent/10"
+                    : "border-border bg-surface hover:bg-surface-hover",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                 )}
               >
                 <div>
-                  <p className="text-sm font-medium text-text-primary">{p.displayName}</p>
-                  <p className="text-[11px] text-text-faint capitalize">{p.status}</p>
+                  <p className="text-sm font-medium text-fg">{p.displayName}</p>
+                  <p className="text-[11px] text-fg-faint capitalize">{p.status}</p>
                 </div>
                 <span
                   aria-hidden="true"
                   className={cn(
                     "flex h-5 w-5 items-center justify-center rounded-full border",
                     isSel
-                      ? "border-accent-cyan bg-accent-cyan text-bg-deeper"
-                      : "border-border-faint",
+                      ? "border-accent bg-accent text-bg"
+                      : "border-border",
                   )}
                 >
                   {isSel ? <Check className="h-3.5 w-3.5" /> : null}

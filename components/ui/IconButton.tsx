@@ -20,9 +20,9 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(functio
       title={label}
       className={cn(
         "inline-flex h-9 w-9 items-center justify-center rounded-full",
-        "border border-border-faint bg-surface-glass text-text-muted hover:bg-surface-glass-strong hover:text-text-primary",
+        "border border-border bg-surface text-fg-muted hover:bg-surface-hover hover:text-fg",
         "transition-colors duration-150",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
         className,
       )}
       {...rest}

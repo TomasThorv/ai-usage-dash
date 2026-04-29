@@ -75,7 +75,7 @@ export function ProviderCard({
         <div className="mt-5 grid grid-cols-[1fr_auto] items-center gap-5">
           <div className="min-w-0 space-y-3">
             <div className="space-y-1">
-              <div className="flex items-baseline justify-between text-[11px] text-text-faint">
+              <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
                 <span>Tokens</span>
                 <span>
                   <CountUp value={session.inputTokens} mono format={formatNumber} /> in ·{" "}
@@ -84,33 +84,33 @@ export function ProviderCard({
               </div>
               <div className="flex h-2 w-full overflow-hidden rounded-full bg-white/5">
                 <div
-                  className="h-full bg-accent-cyan/70 transition-[width] duration-500"
+                  className="h-full bg-accent/70 transition-[width] duration-500"
                   style={{ width: `${inPct}%` }}
                   aria-hidden="true"
                 />
                 <div
-                  className="h-full bg-accent-violet/70 transition-[width] duration-500"
+                  className="h-full bg-accent/70 transition-[width] duration-500"
                   style={{ width: `${outPct}%` }}
                   aria-hidden="true"
                 />
               </div>
             </div>
 
-            <div className="flex items-baseline justify-between text-[11px] text-text-faint">
+            <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
               <span>Requests</span>
               <CountUp
                 value={session.requests}
                 mono
                 format={formatNumber}
-                className="text-text-muted"
+                className="text-fg-muted"
               />
             </div>
 
             {quota?.resetsAt ? (
               <div
                 className={cn(
-                  "flex items-center gap-2 text-[11px] text-text-faint",
-                  status === "stale" && "text-status-stale",
+                  "flex items-center gap-2 text-[11px] text-fg-faint",
+                  status === "stale" && "text-stale",
                 )}
               >
                 <span>Resets in</span>
@@ -129,7 +129,7 @@ export function ProviderCard({
             />
           ) : (
             <div
-              className="flex h-24 w-24 items-center justify-center rounded-full border border-dashed border-border-faint text-[10px] uppercase tracking-wide text-text-faint"
+              className="flex h-24 w-24 items-center justify-center rounded-full border border-dashed border-border text-[10px] uppercase tracking-wide text-fg-faint"
               aria-label="No quota data"
             >
               no quota

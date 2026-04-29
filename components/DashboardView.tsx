@@ -92,7 +92,7 @@ export function DashboardView({
         {connectedIds.length === 0 ? (
           <EmptyState />
         ) : items.length === 0 ? (
-          <p className="py-20 text-center text-sm text-text-muted">
+          <p className="py-20 text-center text-sm text-fg-muted">
             All providers hidden. Toggle pills in the top bar.
           </p>
         ) : (

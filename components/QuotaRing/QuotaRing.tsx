@@ -18,9 +18,9 @@ const RADIUS = 42;
 const CIRC = 2 * Math.PI * RADIUS;
 
 function colorFor(pct: number): string {
-  if (pct > 0.85) return "var(--color-status-error)";
-  if (pct > 0.6) return "var(--color-status-warn)";
-  return "var(--color-status-ok)";
+  if (pct > 0.85) return "var(--color-error)";
+  if (pct > 0.6) return "var(--color-warn)";
+  return "var(--color-ok)";
 }
 
 export function QuotaRing({
@@ -54,8 +54,8 @@ export function QuotaRing({
       <svg viewBox="0 0 100 100" width={size} height={size} aria-hidden="true">
         <defs>
           <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="var(--color-accent-cyan)" />
-            <stop offset="100%" stopColor="var(--color-accent-violet)" />
+            <stop offset="0%" stopColor="var(--color-accent)" />
+            <stop offset="100%" stopColor="var(--color-accent)" />
           </linearGradient>
         </defs>
         <circle
@@ -82,11 +82,11 @@ export function QuotaRing({
         />
       </svg>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
-        <span className="font-mono text-base font-semibold tabular-nums text-text-primary">
+        <span className="font-mono text-base font-semibold tabular-nums text-fg">
           {valueText}
         </span>
         {unit ? (
-          <span className="text-[10px] uppercase tracking-wide text-text-faint">{unit}</span>
+          <span className="text-[10px] uppercase tracking-wide text-fg-faint">{unit}</span>
         ) : null}
       </div>
     </div>

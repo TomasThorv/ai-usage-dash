@@ -27,31 +27,31 @@ const STATUS_META: Record<
 > = {
   fresh: {
     label: "Live",
-    dot: "bg-accent-cyan",
+    dot: "bg-accent",
     pulse: true,
     Icon: CheckCircle2,
-    iconClass: "text-accent-cyan",
+    iconClass: "text-accent",
   },
   stale: {
     label: "Stale",
-    dot: "bg-status-stale",
+    dot: "bg-stale",
     pulse: false,
     Icon: Clock,
-    iconClass: "text-status-stale",
+    iconClass: "text-stale",
   },
   error: {
     label: "Error",
-    dot: "bg-status-error",
+    dot: "bg-error",
     pulse: false,
     Icon: AlertTriangle,
-    iconClass: "text-status-error",
+    iconClass: "text-error",
   },
   loading: {
     label: "Loading",
-    dot: "bg-text-faint",
+    dot: "bg-fg-faint",
     pulse: false,
     Icon: Loader2,
-    iconClass: "text-text-muted animate-spin",
+    iconClass: "text-fg-muted animate-spin",
   },
 };
 
@@ -59,7 +59,7 @@ function ProviderInitial({ name }: { name: string }): ReactNode {
   return (
     <div
       aria-hidden="true"
-      className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-cyan/30 to-accent-violet/30 text-sm font-bold text-text-primary"
+      className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-sm font-bold text-fg"
     >
       {name.charAt(0).toUpperCase()}
     </div>
@@ -75,8 +75,8 @@ export function CardHeader({ logo, name, status, lastUpdatedMs }: CardHeaderProp
       <div className="flex items-center gap-3 min-w-0">
         {logo ?? <ProviderInitial name={name} />}
         <div className="min-w-0">
-          <h3 className="truncate text-sm font-semibold text-text-primary">{name}</h3>
-          <p className="text-[11px] text-text-faint">{formatRelative(iso)}</p>
+          <h3 className="truncate text-sm font-semibold text-fg">{name}</h3>
+          <p className="text-[11px] text-fg-faint">{formatRelative(iso)}</p>
         </div>
       </div>
       <div className="flex items-center gap-2">

@@ -43,23 +43,23 @@ export function KeyManager(): ReactNode {
   return (
     <section className="space-y-3">
       <header className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-text-primary">API Keys</h3>
+        <h3 className="text-sm font-semibold text-fg">API Keys</h3>
         <Button size="sm" variant="ghost" onClick={refresh}>
           Refresh
         </Button>
       </header>
       {rows.length === 0 ? (
-        <p className="text-xs text-text-muted">No credentials saved.</p>
+        <p className="text-xs text-fg-muted">No credentials saved.</p>
       ) : (
         <ul className="space-y-2">
           {rows.map((r) => (
             <li
               key={r.providerId}
-              className="flex items-center justify-between rounded-lg border border-border-faint bg-surface-glass px-3 py-2"
+              className="flex items-center justify-between rounded-lg border border-border bg-surface px-3 py-2"
             >
               <div>
-                <p className="text-sm font-medium capitalize text-text-primary">{r.providerId}</p>
-                <p className="font-mono text-[10px] text-text-faint">••••••••••••••••</p>
+                <p className="text-sm font-medium capitalize text-fg">{r.providerId}</p>
+                <p className="font-mono text-[10px] text-fg-faint">••••••••••••••••</p>
               </div>
               <IconButton
                 label={`Delete ${r.providerId} credentials`}
