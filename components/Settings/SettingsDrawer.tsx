@@ -48,7 +48,7 @@ export function SettingsDrawer({ open, onClose }: SettingsDrawerProps): ReactNod
           <motion.button
             type="button"
             aria-label="Close settings"
-            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -64,7 +64,7 @@ export function SettingsDrawer({ open, onClose }: SettingsDrawerProps): ReactNod
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.28, ease: [0.22, 0.61, 0.36, 1] }}
-            className="fixed right-0 top-0 z-50 flex h-full w-full max-w-[420px] flex-col border-l border-border bg-bg/95 backdrop-blur-[24px]"
+            className="fixed right-0 top-0 z-50 flex h-full w-full max-w-[420px] flex-col border-l border-border bg-bg"
           >
             <header className="flex items-center justify-between border-b border-border px-4 py-3">
               <h2 className="text-sm font-semibold text-fg">Settings</h2>

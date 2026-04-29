@@ -1,6 +1,6 @@
 "use client";
 
-import { GlassCard } from "@/components/Card/GlassCard";
+import { Card } from "@/components/Card/Card";
 import { Button } from "@/components/ui/Button";
 import { AlertTriangle, RotateCw } from "lucide-react";
 import type { ReactNode } from "react";
@@ -13,7 +13,7 @@ interface CardErrorProps {
 
 export function CardError({ code, message, onRetry }: CardErrorProps): ReactNode {
   return (
-    <GlassCard className="border-error/40 p-5">
+    <Card className="border-error/40 p-5">
       <div className="flex items-start gap-3">
         <AlertTriangle aria-hidden="true" className="mt-0.5 h-5 w-5 text-error" />
         <div className="flex-1 min-w-0">
@@ -30,6 +30,6 @@ export function CardError({ code, message, onRetry }: CardErrorProps): ReactNode
           </Button>
         </div>
       ) : null}
-    </GlassCard>
+    </Card>
   );
 }

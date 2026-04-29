@@ -32,7 +32,7 @@ export function TopBar({
   providers,
 }: TopBarProps): ReactNode {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 h-14 border-b border-border bg-bg/60 backdrop-blur-[24px]">
+    <header className="fixed inset-x-0 top-0 z-40 h-14 border-b border-border bg-bg">
       <div className="mx-auto flex h-full max-w-[1600px] items-center gap-4 px-4 sm:px-6">
         <Link
           href="/"

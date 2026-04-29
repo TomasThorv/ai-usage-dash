@@ -1,6 +1,6 @@
 "use client";
 
-import { GlassCard } from "@/components/Card/GlassCard";
+import { Card } from "@/components/Card/Card";
 import { StepKeyEntry } from "@/components/SetupWizard/StepKeyEntry";
 import { StepProgress } from "@/components/SetupWizard/StepProgress";
 import { StepProviderSelect } from "@/components/SetupWizard/StepProviderSelect";
@@ -53,7 +53,7 @@ export function SetupWizard(): ReactNode {
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4 py-10">
-      <GlassCard className="w-full max-w-[720px] p-6 sm:p-8">
+      <Card className="w-full max-w-[720px] p-6 sm:p-8">
         <StepProgress step={stepIndex} total={3} labels={["Select", "Keys", "Verify"]} />
         <div className="mt-6">
           {step === "select" ? (
@@ -75,7 +75,7 @@ export function SetupWizard(): ReactNode {
             <StepReview verified={verified} onBack={() => goto("keys")} />
           ) : null}
         </div>
-      </GlassCard>
+      </Card>
     </main>
   );
 }

@@ -2,7 +2,7 @@
 
 import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader, type CardStatus } from "@/components/Card/CardHeader";
-import { GlassCard } from "@/components/Card/GlassCard";
+import { Card } from "@/components/Card/Card";
 import { ModelBreakdownTable } from "@/components/Card/ModelBreakdownTable";
 import { CountUp } from "@/components/CountUp/CountUp";
 import { Countdown } from "@/components/CountUp/Countdown";
@@ -63,7 +63,7 @@ export function ProviderCard({
   const breakdown = snapshot?.modelBreakdown ?? [];
 
   return (
-    <GlassCard interactive className="min-h-[220px] p-5">
+    <Card interactive className="min-h-[220px] p-5">
       <div
         aria-live="polite"
         aria-atomic="true"
@@ -146,6 +146,6 @@ export function ProviderCard({
           hasBreakdown={breakdown.length > 0}
         />
       </div>
-    </GlassCard>
+    </Card>
   );
 }
