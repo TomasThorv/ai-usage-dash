@@ -2,7 +2,7 @@
 
 import type { ProviderId } from "@/lib/providers/types";
 import { useUiStore } from "@/lib/store/ui";
-import { LayoutGroup, Reorder } from "framer-motion";
+import { Reorder } from "framer-motion";
 import { type ReactNode, useEffect } from "react";
 
 interface DashboardGridProps<T extends { id: ProviderId }> {
@@ -41,8 +41,7 @@ export function DashboardGrid<T extends { id: ProviderId }>({
   };
 
   return (
-    <LayoutGroup>
-      <Reorder.Group
+    <Reorder.Group
         axis="y"
         values={orderedItems}
         onReorder={handleReorder}
@@ -55,6 +54,5 @@ export function DashboardGrid<T extends { id: ProviderId }>({
           </Reorder.Item>
         ))}
       </Reorder.Group>
-    </LayoutGroup>
   );
 }

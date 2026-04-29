@@ -1,6 +1,5 @@
 "use client";
 
-import { CountUp } from "@/components/CountUp/CountUp";
 import { cn } from "@/lib/utils/cn";
 import { formatUsd } from "@/lib/utils/format";
 import { ChevronDown } from "lucide-react";
@@ -23,12 +22,9 @@ export function CardFooter({
     <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
       <div className="flex items-baseline gap-2">
         <span className="text-[11px] uppercase tracking-wide text-fg-faint">Cost</span>
-        <CountUp
-          value={costUsd}
-          mono
-          format={formatUsd}
-          className="text-base font-semibold text-fg"
-        />
+        <span className="font-mono tabular-nums text-base font-semibold text-fg">
+          {formatUsd(costUsd)}
+        </span>
       </div>
       {hasBreakdown ? (
         <button

@@ -4,7 +4,6 @@ import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader, type CardStatus } from "@/components/Card/CardHeader";
 import { Card } from "@/components/Card/Card";
 import { ModelBreakdownTable } from "@/components/Card/ModelBreakdownTable";
-import { CountUp } from "@/components/CountUp/CountUp";
 import { Countdown } from "@/components/CountUp/Countdown";
 import { QuotaRing } from "@/components/QuotaRing/QuotaRing";
 import type { ProviderId, UsageSnapshot } from "@/lib/providers/types";
@@ -51,8 +50,6 @@ export function ProviderCard({
     costUsd: 0,
   };
   const totalTokens = session.inputTokens + session.outputTokens;
-  const inPct = totalTokens > 0 ? (session.inputTokens / totalTokens) * 100 : 0;
-  const outPct = totalTokens > 0 ? (session.outputTokens / totalTokens) * 100 : 0;
 
   const lastUpdated =
     snapshot?.fetchedAt && !Number.isNaN(Date.parse(snapshot.fetchedAt))
@@ -77,33 +74,36 @@ export function ProviderCard({
             <div className="space-y-1">
               <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
                 <span>Tokens</span>
-                <span>
-                  <CountUp value={session.inputTokens} mono format={formatNumber} /> in ·{" "}
-                  <CountUp value={session.outputTokens} mono format={formatNumber} /> out
+                <span className="font-mono tabular-nums text-fg">
+                  {formatNumber(totalTokens)}
                 </span>
               </div>
-              <div className="flex h-2 w-full overflow-hidden rounded-full bg-white/5">
-                <div
-                  className="h-full bg-accent/70 transition-[width] duration-500"
-                  style={{ width: `${inPct}%` }}
-                  aria-hidden="true"
-                />
-                <div
-                  className="h-full bg-accent/70 transition-[width] duration-500"
-                  style={{ width: `${outPct}%` }}
-                  aria-hidden="true"
-                />
+              <div className="flex h-1.5 w-full overflow-hidden rounded-full bg-border">
+                {quota && quota.limit > 0 ? (
+                  <div
+                    className="h-full bg-fg/70 transition-[width] duration-500"
+                    style={{ width: `${Math.min(100, (totalTokens / quota.limit) * 100)}%` }}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <div
+                    className="h-full bg-fg/40 transition-[width] duration-500"
+                    style={{ width: `${Math.min(100, totalTokens > 0 ? 100 : 0)}%` }}
+                    aria-hidden="true"
+                  />
+                )}
+              </div>
+              <div className="flex items-baseline justify-between text-[10px] text-fg-faint font-mono tabular-nums">
+                <span>{formatNumber(session.inputTokens)} in</span>
+                <span>{formatNumber(session.outputTokens)} out</span>
               </div>
             </div>
 
             <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
               <span>Requests</span>
-              <CountUp
-                value={session.requests}
-                mono
-                format={formatNumber}
-                className="text-fg-muted"
-              />
+              <span className="font-mono tabular-nums text-fg">
+                {formatNumber(session.requests)}
+              </span>
             </div>
 
             {quota?.resetsAt ? (
