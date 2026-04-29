@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "deslop": {
+      "source": "brianlovin/agent-config",
+      "sourceType": "github",
+      "skillPath": "skills/deslop/SKILL.md",
+      "computedHash": "72f1f9e44634a062c3725c3d82b4f53ffbe0dfb82aa38ef3a0ef30a3111a3d7a"
+    },
+    "human-architect-mindset": {
+      "source": "bencium/bencium-claude-code-design-skill",
+      "sourceType": "github",
+      "skillPath": "human-architect-mindset/skills/human-architect-mindset/SKILL.md",
+      "computedHash": "59f31549dfcbd65569a9ddebc2840161a560f6a80844e0046da75f298d340437"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    }
+  }
+}

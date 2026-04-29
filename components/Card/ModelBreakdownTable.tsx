@@ -45,10 +45,7 @@ export function ModelBreakdownTable({ rows, open }: ModelBreakdownTableProps): R
                   rows.map((r, i) => (
                     <tr
                       key={r.model}
-                      className={cn(
-                        "border-t border-border",
-                        i % 2 === 1 && "bg-surface/40",
-                      )}
+                      className={cn("border-t border-border", i % 2 === 1 && "bg-surface/40")}
                     >
                       <td className="truncate px-3 py-1.5 text-fg" title={r.model}>
                         {r.model}

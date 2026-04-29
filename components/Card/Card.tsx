@@ -8,11 +8,7 @@ interface CardProps {
   as?: "div" | "section" | "article";
 }
 
-export function Card({
-  children,
-  className,
-  interactive = false,
-}: CardProps): ReactNode {
+export function Card({ children, className, interactive = false }: CardProps): ReactNode {
   return (
     <div
       className={cn(

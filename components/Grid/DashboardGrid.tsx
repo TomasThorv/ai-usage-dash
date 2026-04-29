@@ -42,17 +42,17 @@ export function DashboardGrid<T extends { id: ProviderId }>({
 
   return (
     <Reorder.Group
-        axis="y"
-        values={orderedItems}
-        onReorder={handleReorder}
-        className="grid w-full gap-5"
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}
-      >
-        {orderedItems.map((item) => (
-          <Reorder.Item key={item.id} value={item} as="div" className="list-none">
-            {renderItem(item)}
-          </Reorder.Item>
-        ))}
-      </Reorder.Group>
+      axis="y"
+      values={orderedItems}
+      onReorder={handleReorder}
+      className="grid w-full gap-5"
+      style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}
+    >
+      {orderedItems.map((item) => (
+        <Reorder.Item key={item.id} value={item} as="div" className="list-none">
+          {renderItem(item)}
+        </Reorder.Item>
+      ))}
+    </Reorder.Group>
   );
 }

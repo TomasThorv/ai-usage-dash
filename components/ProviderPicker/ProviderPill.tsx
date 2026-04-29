@@ -35,10 +35,7 @@ export function ProviderPill({
     >
       <span
         aria-hidden="true"
-        className={cn(
-          "block h-1.5 w-1.5 rounded-full",
-          connected ? "bg-accent" : "bg-fg-faint",
-        )}
+        className={cn("block h-1.5 w-1.5 rounded-full", connected ? "bg-accent" : "bg-fg-faint")}
       />
       <span>{label}</span>
     </button>

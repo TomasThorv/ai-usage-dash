@@ -79,7 +79,11 @@ export function StepKeyEntry({
       setStates((s) => ({ ...s, [id]: { kind: "verifying" } }));
       const verRes = await fetch(`/api/credentials/${id}/verify`, {
         method: "POST",
-        headers: { ...(token ? { "x-csrf-token": token } : {}) },
+        headers: {
+          "content-type": "application/json",
+          ...(token ? { "x-csrf-token": token } : {}),
+        },
+        body: JSON.stringify({ creds: creds[id] ?? {} }),
       });
       if (!verRes.ok) {
         const data = (await verRes.json().catch(() => ({}))) as { error?: string };

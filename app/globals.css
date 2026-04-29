@@ -18,8 +18,8 @@
   --color-accent: #f5f5f5;
 
   /* status (mute the saturation) */
-  --color-ok:    #4ade80;
-  --color-warn:  #f59e0b;
+  --color-ok: #4ade80;
+  --color-warn: #f59e0b;
   --color-error: #f87171;
   --color-stale: #a1a1aa;
 

@@ -8,11 +8,7 @@ interface AggregateMetricProps {
   format?: (n: number) => string;
 }
 
-export function AggregateMetric({
-  label,
-  value,
-  format,
-}: AggregateMetricProps): ReactNode {
+export function AggregateMetric({ label, value, format }: AggregateMetricProps): ReactNode {
   return (
     <div className="flex flex-col leading-tight">
       <span className="text-[10px] uppercase tracking-wide text-fg-faint">{label}</span>
