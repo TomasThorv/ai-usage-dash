@@ -1,0 +1,75 @@
+{
+  "apiKey": {
+    "events": {
+      "totalUsageEventsCount": 3,
+      "usageEvents": [
+        {
+          "timestamp": "1761696000000",
+          "model": "claude-sonnet-4-5",
+          "kindLabel": "premium",
+          "tokenUsage": {
+            "inputTokens": 1000,
+            "outputTokens": 500,
+            "cacheReadTokens": 200,
+            "cacheWriteTokens": 100,
+            "totalCents": 12.5
+          }
+        },
+        {
+          "timestamp": "1761699600000",
+          "model": "gpt-4.1",
+          "kindLabel": "premium",
+          "tokenUsage": {
+            "inputTokens": 800,
+            "outputTokens": 300,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": 0,
+            "totalCents": 7.5
+          }
+        },
+        {
+          "timestamp": "1761703200000",
+          "model": "claude-sonnet-4-5",
+          "kindLabel": "premium",
+          "tokenUsage": {
+            "inputTokens": 600,
+            "outputTokens": 200,
+            "cacheReadTokens": 50,
+            "cacheWriteTokens": 0,
+            "totalCents": 5.0
+          }
+        }
+      ]
+    },
+    "spend": {
+      "totalMembers": 4,
+      "subscriptionCycleStart": 1761609600000,
+      "teamMemberSpend": [
+        { "spendCents": 1500, "fastPremiumRequests": 30 },
+        { "spendCents": 800, "fastPremiumRequests": 15 }
+      ]
+    }
+  },
+  "cookie": {
+    "currentPeriod": {
+      "startOfMonth": "2026-04-01T00:00:00Z",
+      "endOfMonth": "2026-05-01T00:00:00Z",
+      "subscriptionCycleStart": 1759276800000,
+      "subscriptionCycleEnd": 1761868800000,
+      "usageBasedPricing": {
+        "totalSpendCents": 1234,
+        "hardLimitCents": 5000
+      },
+      "fastPremiumRequests": {
+        "numRequests": 250,
+        "maxRequestUsage": 500
+      }
+    },
+    "me": {
+      "user": {
+        "userId": "user_abc",
+        "email": "user@example.com"
+      }
+    }
+  }
+}

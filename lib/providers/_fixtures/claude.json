@@ -1,0 +1,52 @@
+{
+  "usage": {
+    "data": [
+      {
+        "starting_at": "2026-04-29T00:00:00Z",
+        "ending_at": "2026-04-30T00:00:00Z",
+        "results": [
+          {
+            "model": "claude-sonnet-4-5",
+            "uncached_input_tokens": 12000,
+            "output_tokens": 8000,
+            "cache_read_input_tokens": 5000,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 1000,
+              "ephemeral_1h_input_tokens": 500
+            }
+          },
+          {
+            "model": "claude-opus-4-7",
+            "uncached_input_tokens": 3000,
+            "output_tokens": 4000,
+            "cache_read_input_tokens": 1000,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 200,
+              "ephemeral_1h_input_tokens": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "cost": {
+    "data": [
+      {
+        "starting_at": "2026-04-29T00:00:00Z",
+        "ending_at": "2026-04-30T00:00:00Z",
+        "results": [
+          {
+            "amount": "1234.56",
+            "currency": "USD",
+            "description": "Sonnet input"
+          },
+          {
+            "amount": "789.00",
+            "currency": "USD",
+            "description": "Opus output"
+          }
+        ]
+      }
+    ]
+  }
+}

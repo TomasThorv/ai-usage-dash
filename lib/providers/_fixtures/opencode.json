@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "id": "msg-1",
+      "session_id": "sess-1",
+      "role": "assistant",
+      "model": "claude-sonnet-4-5",
+      "input": 1000,
+      "output": 500,
+      "reasoning": 0,
+      "cache_read": 200,
+      "cache_write": 100,
+      "cost": 0.0125,
+      "created_at_offset_ms": 0
+    },
+    {
+      "id": "msg-2",
+      "session_id": "sess-1",
+      "role": "assistant",
+      "model": "claude-sonnet-4-5",
+      "input": 600,
+      "output": 200,
+      "reasoning": 0,
+      "cache_read": 50,
+      "cache_write": 0,
+      "cost": 0.005,
+      "created_at_offset_ms": 1000
+    },
+    {
+      "id": "msg-3",
+      "session_id": "sess-2",
+      "role": "assistant",
+      "model": "gpt-4.1",
+      "input": 800,
+      "output": 300,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0,
+      "cost": 0.0075,
+      "created_at_offset_ms": 2000
+    }
+  ]
+}

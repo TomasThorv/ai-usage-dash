@@ -1,0 +1,49 @@
+name: New provider
+description: Propose a new provider adapter
+title: "provider: "
+labels: ["provider", "enhancement"]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider name
+      placeholder: "e.g. Mistral, Cohere, Together"
+    validations:
+      required: true
+  - type: dropdown
+    id: public-api
+    attributes:
+      label: Has public usage API
+      options:
+        - "yes"
+        - "unofficial"
+        - "no"
+    validations:
+      required: true
+  - type: textarea
+    id: endpoints
+    attributes:
+      label: Endpoint URL(s)
+      description: One per line, with HTTP method.
+    validations:
+      required: true
+  - type: textarea
+    id: auth
+    attributes:
+      label: Auth method
+      description: API key, OAuth, cookie, service account, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: rate-limits
+    attributes:
+      label: Rate limits
+      description: Documented rpm, daily caps, or known throttling behaviour.
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+    validations:
+      required: false

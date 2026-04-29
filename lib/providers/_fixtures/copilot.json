@@ -1,0 +1,33 @@
+{
+  "billing": {
+    "seat_breakdown": {
+      "total": 50,
+      "added_this_cycle": 2,
+      "pending_invitation": 1,
+      "pending_cancellation": 0,
+      "active_this_cycle": 42,
+      "inactive_this_cycle": 8
+    },
+    "seat_management_setting": "assign_selected",
+    "ide_chat": "enabled",
+    "platform_chat": "enabled",
+    "cli": "enabled",
+    "public_code_suggestions": "block",
+    "plan_type": "business"
+  },
+  "metricsIndex": {
+    "download_links": ["https://example.com/copilot-metrics.json.gz"]
+  },
+  "metricsBlob": {
+    "date": "2026-04-29",
+    "total_active_users": 35,
+    "total_engaged_users": 28,
+    "total_code_suggestions": 1250,
+    "total_code_lines_accepted": 4800,
+    "copilot_ide_code_completions": {
+      "total_engaged_users": 28,
+      "languages": [],
+      "editors": []
+    }
+  }
+}

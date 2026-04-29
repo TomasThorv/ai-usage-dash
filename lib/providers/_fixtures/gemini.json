@@ -1,0 +1,34 @@
+{
+  "quotaInfos": [
+    {
+      "name": "projects/123/locations/global/services/generativelanguage.googleapis.com/quotaInfos/GenerateRequestsPerMinutePerProjectPerModel",
+      "quotaId": "GenerateRequestsPerMinutePerProjectPerModel",
+      "metric": "generativelanguage.googleapis.com/generate_requests",
+      "service": "generativelanguage.googleapis.com",
+      "isPrecise": true,
+      "refreshInterval": "minute",
+      "containerType": "PROJECT",
+      "dimensions": ["model"],
+      "metricUnit": "1",
+      "quotaIncreaseEligibility": { "isEligible": true },
+      "isFixed": false,
+      "dimensionsInfos": [
+        { "dimensions": { "model": "gemini-2.0-pro" }, "details": { "value": "60" } }
+      ]
+    },
+    {
+      "name": "projects/123/locations/global/services/generativelanguage.googleapis.com/quotaInfos/GenerateRequestsPerDayPerProjectPerModel",
+      "quotaId": "GenerateRequestsPerDayPerProjectPerModel",
+      "metric": "generativelanguage.googleapis.com/generate_requests_per_day",
+      "service": "generativelanguage.googleapis.com",
+      "refreshInterval": "day",
+      "containerType": "PROJECT",
+      "dimensions": ["model"],
+      "metricUnit": "1",
+      "isFixed": true,
+      "dimensionsInfos": [
+        { "dimensions": { "model": "gemini-2.0-pro" }, "details": { "value": "1500" } }
+      ]
+    }
+  ]
+}
