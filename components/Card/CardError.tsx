@@ -13,7 +13,7 @@ interface CardErrorProps {
 
 export function CardError({ code, message, onRetry }: CardErrorProps): ReactNode {
   return (
-    <Card className="border-error/40 p-5">
+    <Card className="border-error/40 p-6">
       <div className="flex items-start gap-3">
         <AlertTriangle aria-hidden="true" className="mt-0.5 h-5 w-5 text-error" />
         <div className="flex-1 min-w-0">

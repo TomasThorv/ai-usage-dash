@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 export function CardSkeleton(): ReactNode {
   return (
-    <Card className="p-5">
+    <Card className="p-6">
       <div className="space-y-4">
         <div className="flex items-center gap-3">
           <div className="shimmer h-8 w-8 rounded-lg" />

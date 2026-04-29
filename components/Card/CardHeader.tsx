@@ -75,8 +75,8 @@ export function CardHeader({ logo, name, status, lastUpdatedMs }: CardHeaderProp
       <div className="flex items-center gap-3 min-w-0">
         {logo ?? <ProviderInitial name={name} />}
         <div className="min-w-0">
-          <h3 className="truncate text-sm font-semibold text-fg">{name}</h3>
-          <p className="text-[11px] text-fg-faint">{formatRelative(iso)}</p>
+          <h3 className="truncate text-sm font-medium text-fg">{name}</h3>
+          <p className="text-[11px] text-fg-muted font-mono tabular-nums">{formatRelative(iso)}</p>
         </div>
       </div>
       <div className="flex items-center gap-2">

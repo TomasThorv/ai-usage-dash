@@ -60,7 +60,7 @@ export function ProviderCard({
   const breakdown = snapshot?.modelBreakdown ?? [];
 
   return (
-    <Card interactive className="min-h-[220px] p-5">
+    <Card interactive className="min-h-[220px] p-6">
       <div
         aria-live="polite"
         aria-atomic="true"
@@ -69,8 +69,8 @@ export function ProviderCard({
       >
         <CardHeader name={displayName} status={status} lastUpdatedMs={lastUpdated} />
 
-        <div className="mt-5 grid grid-cols-[1fr_auto] items-center gap-5">
-          <div className="min-w-0 space-y-3">
+        <div className="mt-4 grid grid-cols-[1fr_auto] items-center gap-5">
+          <div className="min-w-0 space-y-2">
             <div className="space-y-1">
               <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
                 <span>Tokens</span>
