@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/Card/Card";
 import { Button } from "@/components/ui/Button";
-import { AlertTriangle, RotateCw } from "lucide-react";
+import { AlertCircle, RotateCw } from "lucide-react";
 import type { ReactNode } from "react";
 
 interface CardErrorProps {
@@ -15,13 +15,10 @@ export function CardError({ code, message, onRetry }: CardErrorProps): ReactNode
   return (
     <Card className="border-error/40 p-6">
       <div className="flex items-start gap-3">
-        <AlertTriangle aria-hidden="true" className="mt-0.5 h-5 w-5 text-error" />
-        <div className="flex-1 min-w-0">
-          <p className="text-sm font-semibold text-error">
-            {code ? `Error · ${code}` : "Error"}
-          </p>
-          <p className="mt-1 break-words text-xs text-fg-muted">{message}</p>
-        </div>
+        <AlertCircle aria-hidden="true" className="mt-0.5 h-5 w-5 text-error" />
+        <p className="font-mono text-[12px] text-error leading-relaxed">
+          {code ? `${code}: ${message}` : message}
+        </p>
       </div>
       {onRetry ? (
         <div className="mt-4 flex justify-end">
