@@ -128,12 +128,9 @@ export function ProviderCard({
               unit={quotaUnitLabel(quota.unit)}
             />
           ) : (
-            <div
-              className="flex h-24 w-24 items-center justify-center rounded-full border border-dashed border-border text-[10px] uppercase tracking-wide text-fg-faint"
-              aria-label="No quota data"
-            >
-              no quota
-            </div>
+            <span className="text-[11px] text-fg-faint self-center">
+              no quota tracked
+            </span>
           )}
         </div>
 

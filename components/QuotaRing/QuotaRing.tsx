@@ -1,9 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils/cn";
-import { usePrefersReducedMotion } from "@/lib/utils/reducedMotion";
 import { motion } from "framer-motion";
-import { type ReactNode, useId } from "react";
+import { type ReactNode } from "react";
 
 interface QuotaRingProps {
   used: number;
@@ -17,12 +16,6 @@ interface QuotaRingProps {
 const RADIUS = 42;
 const CIRC = 2 * Math.PI * RADIUS;
 
-function colorFor(pct: number): string {
-  if (pct > 0.85) return "var(--color-error)";
-  if (pct > 0.6) return "var(--color-warn)";
-  return "var(--color-ok)";
-}
-
 export function QuotaRing({
   used,
   limit,
@@ -31,18 +24,14 @@ export function QuotaRing({
   label,
   unit,
 }: QuotaRingProps): ReactNode {
-  const reduced = usePrefersReducedMotion();
-  const gradId = useId();
   const safeLimit = limit > 0 ? limit : 1;
   const pct = Math.max(0, Math.min(1, used / safeLimit));
-  const color = colorFor(pct);
   const offset = CIRC * (1 - pct);
-  const pulse = pct > 0.95 && !reduced;
   const valueText = `${Math.round(pct * 100)}%`;
 
   return (
     <div
-      className={cn("relative inline-flex items-center justify-center", pulse && "animate-pulse")}
+      className="relative inline-flex items-center justify-center"
       style={{ width: size, height: size }}
       role="progressbar"
       tabIndex={0}
@@ -52,18 +41,12 @@ export function QuotaRing({
       aria-label={label ?? "Quota usage"}
     >
       <svg viewBox="0 0 100 100" width={size} height={size} aria-hidden="true">
-        <defs>
-          <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="var(--color-accent)" />
-            <stop offset="100%" stopColor="var(--color-accent)" />
-          </linearGradient>
-        </defs>
         <circle
           cx="50"
           cy="50"
           r={RADIUS}
           fill="none"
-          stroke="rgba(255,255,255,0.08)"
+          stroke="var(--color-border)"
           strokeWidth={stroke}
         />
         <motion.circle
@@ -71,14 +54,15 @@ export function QuotaRing({
           cy="50"
           r={RADIUS}
           fill="none"
-          stroke={color}
+          stroke="var(--color-fg)"
+          strokeOpacity="0.7"
           strokeWidth={stroke}
           strokeLinecap="round"
           transform="rotate(-90 50 50)"
           strokeDasharray={CIRC}
           initial={{ strokeDashoffset: CIRC }}
-          animate={{ strokeDashoffset: reduced ? offset : offset }}
-          transition={{ duration: reduced ? 0 : 0.6, ease: [0.42, 0, 0.58, 1] }}
+          animate={{ strokeDashoffset: offset }}
+          transition={{ duration: 0.6, ease: [0.42, 0, 0.58, 1] }}
         />
       </svg>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
