@@ -1,8 +1,8 @@
 "use client";
 
+import { Card } from "@/components/Card/Card";
 import { CardFooter } from "@/components/Card/CardFooter";
 import { CardHeader, type CardStatus } from "@/components/Card/CardHeader";
-import { Card } from "@/components/Card/Card";
 import { ModelBreakdownTable } from "@/components/Card/ModelBreakdownTable";
 import { Countdown } from "@/components/CountUp/Countdown";
 import { QuotaRing } from "@/components/QuotaRing/QuotaRing";
@@ -74,9 +74,7 @@ export function ProviderCard({
             <div className="space-y-1">
               <div className="flex items-baseline justify-between text-[11px] text-fg-faint">
                 <span>Tokens</span>
-                <span className="font-mono tabular-nums text-fg">
-                  {formatNumber(totalTokens)}
-                </span>
+                <span className="font-mono tabular-nums text-fg">{formatNumber(totalTokens)}</span>
               </div>
               <div className="flex h-1.5 w-full overflow-hidden rounded-full bg-border">
                 {quota && quota.limit > 0 ? (
@@ -128,9 +126,7 @@ export function ProviderCard({
               unit={quotaUnitLabel(quota.unit)}
             />
           ) : (
-            <span className="text-[11px] text-fg-faint self-center">
-              no quota tracked
-            </span>
+            <span className="text-[11px] text-fg-faint self-center">no quota tracked</span>
           )}
         </div>
 

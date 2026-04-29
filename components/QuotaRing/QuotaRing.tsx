@@ -1,8 +1,6 @@
 "use client";
-
-import { cn } from "@/lib/utils/cn";
 import { motion } from "framer-motion";
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface QuotaRingProps {
   used: number;
@@ -66,9 +64,7 @@ export function QuotaRing({
         />
       </svg>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
-        <span className="font-mono text-base font-semibold tabular-nums text-fg">
-          {valueText}
-        </span>
+        <span className="font-mono text-base font-semibold tabular-nums text-fg">{valueText}</span>
         {unit ? (
           <span className="text-[10px] uppercase tracking-wide text-fg-faint">{unit}</span>
         ) : null}

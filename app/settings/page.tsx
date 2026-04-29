@@ -1,6 +1,3 @@
-import { GradientBackdrop } from "@/components/Background/GradientBackdrop";
-import { GridOverlay } from "@/components/Background/GridOverlay";
-import { Vignette } from "@/components/Background/Vignette";
 import { DashboardLiveBridge } from "@/components/DashboardLiveBridge";
 import { DashboardView } from "@/components/DashboardView";
 import { boot } from "@/lib/boot";
@@ -24,9 +21,6 @@ export default async function SettingsPage(): Promise<ReactNode> {
 
   return (
     <>
-      <GradientBackdrop />
-      <GridOverlay />
-      <Vignette />
       <DashboardLiveBridge initial={initial} />
       <DashboardView providers={providers} initialOpenSettings />
     </>
