@@ -24,7 +24,7 @@ export function PollingControl({ providers }: PollingControlProps): ReactNode {
 
   return (
     <section className="space-y-3">
-      <h3 className="text-sm font-semibold text-fg">Polling intervals</h3>
+      <h3 className="text-sm font-medium text-fg">Polling intervals</h3>
       <p className="text-xs text-fg-muted">
         Local-only. Stored client-side; takes effect on next refresh.
       </p>

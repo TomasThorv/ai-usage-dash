@@ -56,7 +56,7 @@ export function StepProviderSelect({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-lg font-semibold text-fg">Pick providers</h2>
+        <h2 className="text-lg font-medium text-fg">Pick providers</h2>
         <p className="mt-1 text-sm text-fg-muted">
           Choose any combination — you can add more later.
         </p>
@@ -77,7 +77,7 @@ export function StepProviderSelect({
                 onClick={() => toggle(p.id)}
                 aria-pressed={isSel}
                 className={cn(
-                  "flex items-center justify-between rounded-xl border px-3 py-2.5 text-left transition-colors",
+                  "flex items-center justify-between rounded-card border px-3 py-2.5 text-left transition-colors",
                   isSel
                     ? "border-accent/50 bg-accent/10"
                     : "border-border bg-surface hover:bg-surface-hover",
@@ -92,9 +92,7 @@ export function StepProviderSelect({
                   aria-hidden="true"
                   className={cn(
                     "flex h-5 w-5 items-center justify-center rounded-full border",
-                    isSel
-                      ? "border-accent bg-accent text-bg"
-                      : "border-border",
+                    isSel ? "border-accent bg-accent text-bg" : "border-border",
                   )}
                 >
                   {isSel ? <Check className="h-3.5 w-3.5" /> : null}

@@ -36,8 +36,8 @@ const HELP: Record<ProviderId, { title: string; body: string; link?: string }> =
 export function KeyHelpPanel({ providerId }: { providerId: ProviderId }): ReactNode {
   const help = HELP[providerId];
   return (
-    <aside className="rounded-xl border border-border bg-bg/40 p-4">
-      <h4 className="text-sm font-semibold text-fg">{help.title}</h4>
+    <aside className="rounded-card border border-border bg-bg/40 p-4">
+      <h4 className="text-sm font-medium text-fg">{help.title}</h4>
       <p className="mt-2 text-xs leading-relaxed text-fg-muted">{help.body}</p>
       {help.link ? (
         <a

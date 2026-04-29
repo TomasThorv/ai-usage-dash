@@ -106,7 +106,7 @@ export function StepKeyEntry({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-lg font-semibold text-fg">Enter API keys</h2>
+        <h2 className="text-lg font-medium text-fg">Enter API keys</h2>
         <p className="mt-1 text-sm text-fg-muted">
           Keys are encrypted at rest with libsodium sealed-boxes. Verify each before continuing.
         </p>
@@ -121,7 +121,7 @@ export function StepKeyEntry({
               <div
                 key={p.id}
                 className={cn(
-                  "overflow-hidden rounded-xl border bg-surface",
+                  "overflow-hidden rounded-card border bg-surface",
                   state.kind === "ok"
                     ? "border-ok/40"
                     : state.kind === "error"
@@ -133,7 +133,7 @@ export function StepKeyEntry({
                   type="button"
                   onClick={() => setOpen(isOpen ? null : p.id)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-deeper"
+                  className="flex w-full items-center justify-between px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
                 >
                   <div className="flex items-center gap-2">
                     {state.kind === "ok" ? (
@@ -141,10 +141,7 @@ export function StepKeyEntry({
                     ) : state.kind === "error" ? (
                       <XCircle className="h-4 w-4 text-error" aria-hidden="true" />
                     ) : state.kind === "verifying" || state.kind === "saving" ? (
-                      <Loader2
-                        className="h-4 w-4 animate-spin text-fg-muted"
-                        aria-hidden="true"
-                      />
+                      <Loader2 className="h-4 w-4 animate-spin text-fg-muted" aria-hidden="true" />
                     ) : (
                       <span className="block h-2 w-2 rounded-full bg-fg-faint" />
                     )}

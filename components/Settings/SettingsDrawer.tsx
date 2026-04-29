@@ -67,7 +67,7 @@ export function SettingsDrawer({ open, onClose }: SettingsDrawerProps): ReactNod
             className="fixed right-0 top-0 z-50 flex h-full w-full max-w-[420px] flex-col border-l border-border bg-bg"
           >
             <header className="flex items-center justify-between border-b border-border px-4 py-3">
-              <h2 className="text-sm font-semibold text-fg">Settings</h2>
+              <h2 className="text-sm font-medium text-fg">Settings</h2>
               <IconButton label="Close settings" onClick={onClose}>
                 <X aria-hidden="true" className="h-4 w-4" />
               </IconButton>

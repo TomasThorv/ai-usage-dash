@@ -20,9 +20,9 @@ export function StepProgress({ step, total, labels }: StepProgressProps): ReactN
           </span>
         ))}
       </div>
-      <div className="h-1 w-full overflow-hidden rounded-full bg-white/5">
+      <div className="h-1 w-full overflow-hidden rounded-full bg-border">
         <motion.div
-          className="h-full bg-accent"
+          className="h-full bg-fg/70"
           initial={false}
           animate={{ width: `${pct * 100}%` }}
           transition={{ duration: 0.3, ease: [0.22, 0.61, 0.36, 1] }}

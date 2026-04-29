@@ -43,7 +43,7 @@ export function KeyManager(): ReactNode {
   return (
     <section className="space-y-3">
       <header className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-fg">API Keys</h3>
+        <h3 className="text-sm font-medium text-fg">API Keys</h3>
         <Button size="sm" variant="ghost" onClick={refresh}>
           Refresh
         </Button>
@@ -55,7 +55,7 @@ export function KeyManager(): ReactNode {
           {rows.map((r) => (
             <li
               key={r.providerId}
-              className="flex items-center justify-between rounded-lg border border-border bg-surface px-3 py-2"
+              className="flex items-center justify-between rounded-card border border-border bg-surface px-3 py-2"
             >
               <div>
                 <p className="text-sm font-medium capitalize text-fg">{r.providerId}</p>

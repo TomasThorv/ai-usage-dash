@@ -34,8 +34,8 @@ export function DangerZone(): ReactNode {
   };
 
   return (
-    <section className="space-y-3 rounded-xl border border-error/30 p-3">
-      <h3 className="text-sm font-semibold text-error">Danger zone</h3>
+    <section className="space-y-3 rounded-card border border-error/30 p-3">
+      <h3 className="text-sm font-medium text-error">Danger zone</h3>
       <p className="text-xs text-fg-muted">
         Type <code className="rounded bg-bg px-1 font-mono">{CONFIRM_PHRASE}</code> to enable.
       </p>
