@@ -38,11 +38,7 @@ export function TopBar({
           href="/"
           className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         >
-          <span
-            aria-hidden="true"
-            className="block h-6 w-6 rounded-md bg-accent"
-          />
-          <span className="hidden text-sm font-semibold tracking-tight text-fg sm:inline">
+          <span className="font-mono text-sm font-semibold tracking-tight text-fg sm:block">
             AI Usage
           </span>
         </Link>
