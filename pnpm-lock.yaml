@@ -85,8 +85,8 @@ importers:
         specifier: 7.0.3
         version: 7.0.3
       dotenv:
-        specifier: 16.4.7
-        version: 16.4.7
+        specifier: 17.4.2
+        version: 17.4.2
       jsdom:
         specifier: 25.0.1
         version: 25.0.1
@@ -1233,8 +1233,8 @@ packages:
   dom-accessibility-api@0.6.3:
     resolution: {integrity: sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w==}
 
-  dotenv@16.4.7:
-    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+  dotenv@17.4.2:
+    resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -3183,7 +3183,7 @@ snapshots:
 
   dom-accessibility-api@0.6.3: {}
 
-  dotenv@16.4.7: {}
+  dotenv@17.4.2: {}
 
   dunder-proto@1.0.1:
     dependencies:
