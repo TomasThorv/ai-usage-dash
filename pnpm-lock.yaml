@@ -67,8 +67,8 @@ importers:
         specifier: 0.7.8
         version: 0.7.8
       '@types/node':
-        specifier: 22.10.2
-        version: 22.10.2
+        specifier: 25.6.0
+        version: 25.6.0
       '@types/react':
         specifier: 19.0.2
         version: 19.0.2
@@ -77,10 +77,10 @@ importers:
         version: 19.0.2(@types/react@19.0.2)
       '@vitejs/plugin-react':
         specifier: 4.3.4
-        version: 4.3.4(vite@5.4.21(@types/node@22.10.2)(lightningcss@1.32.0))
+        version: 4.3.4(vite@5.4.21(@types/node@25.6.0)(lightningcss@1.32.0))
       '@vitest/coverage-v8':
         specifier: 2.1.8
-        version: 2.1.8(vitest@2.1.8(@types/node@22.10.2)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)))
+        version: 2.1.8(vitest@2.1.8(@types/node@25.6.0)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2)))
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -92,7 +92,7 @@ importers:
         version: 25.0.1
       msw:
         specifier: 2.7.0
-        version: 2.7.0(@types/node@22.10.2)(typescript@5.7.2)
+        version: 2.7.0(@types/node@25.6.0)(typescript@5.7.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -104,7 +104,7 @@ importers:
         version: 5.7.2
       vitest:
         specifier: 2.1.8
-        version: 2.1.8(@types/node@22.10.2)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))
+        version: 2.1.8(@types/node@25.6.0)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2))
 
 packages:
 
@@ -953,8 +953,8 @@ packages:
     resolution: {integrity: sha512-+2IDfSULPUskSjIYfZl9suIUsIE5PXwoKZiE/j0MZWd+M9nEGvJDsk/ztMZKNhL1lBL+1CaypW0dQSjqPW2dMg==}
     deprecated: This is a stub types definition. libsodium-wrappers provides its own type definitions, so you do not need this installed.
 
-  '@types/node@22.10.2':
-    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+  '@types/node@25.6.0':
+    resolution: {integrity: sha512-+qIYRKdNYJwY3vRCZMdJbPLJAtGjQBudzZzdzwQYkEPQd+PJGixUL5QfvCLDaULoLv+RhT3LDkwEfKaAkgSmNQ==}
 
   '@types/react-dom@19.0.2':
     resolution: {integrity: sha512-c1s+7TKFaDRRxr1TxccIX2u7sfCnc3RxkVyBIUA2lCpyqCF+QoAwQ/CBg7bsMdVwP120HEH143VQezKtef5nCg==}
@@ -2036,8 +2036,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@6.20.0:
-    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+  undici-types@7.19.2:
+    resolution: {integrity: sha512-qYVnV5OEm2AW8cJMCpdV20CDyaN3g0AjDlOGf1OW4iaDEx8MwdtChUp4zu4H0VP3nDRF/8RKWH+IPp9uW0YGZg==}
 
   universalify@0.2.0:
     resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
@@ -2575,31 +2575,31 @@ snapshots:
 
   '@inquirer/ansi@1.0.2': {}
 
-  '@inquirer/confirm@5.1.21(@types/node@22.10.2)':
+  '@inquirer/confirm@5.1.21(@types/node@25.6.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@22.10.2)
-      '@inquirer/type': 3.0.10(@types/node@22.10.2)
+      '@inquirer/core': 10.3.2(@types/node@25.6.0)
+      '@inquirer/type': 3.0.10(@types/node@25.6.0)
     optionalDependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
 
-  '@inquirer/core@10.3.2(@types/node@22.10.2)':
+  '@inquirer/core@10.3.2(@types/node@25.6.0)':
     dependencies:
       '@inquirer/ansi': 1.0.2
       '@inquirer/figures': 1.0.15
-      '@inquirer/type': 3.0.10(@types/node@22.10.2)
+      '@inquirer/type': 3.0.10(@types/node@25.6.0)
       cli-width: 4.1.0
       mute-stream: 2.0.0
       signal-exit: 4.1.0
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
 
   '@inquirer/figures@1.0.15': {}
 
-  '@inquirer/type@3.0.10(@types/node@22.10.2)':
+  '@inquirer/type@3.0.10(@types/node@25.6.0)':
     optionalDependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2890,7 +2890,7 @@ snapshots:
 
   '@types/better-sqlite3@7.6.12':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
 
   '@types/cookie@0.6.0': {}
 
@@ -2904,9 +2904,9 @@ snapshots:
     dependencies:
       libsodium-wrappers: 0.8.4
 
-  '@types/node@22.10.2':
+  '@types/node@25.6.0':
     dependencies:
-      undici-types: 6.20.0
+      undici-types: 7.19.2
 
   '@types/react-dom@19.0.2(@types/react@19.0.2)':
     dependencies:
@@ -2920,18 +2920,18 @@ snapshots:
 
   '@types/tough-cookie@4.0.5': {}
 
-  '@vitejs/plugin-react@4.3.4(vite@5.4.21(@types/node@22.10.2)(lightningcss@1.32.0))':
+  '@vitejs/plugin-react@4.3.4(vite@5.4.21(@types/node@25.6.0)(lightningcss@1.32.0))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
       '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.29.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.21(@types/node@22.10.2)(lightningcss@1.32.0)
+      vite: 5.4.21(@types/node@25.6.0)(lightningcss@1.32.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.1.8(vitest@2.1.8(@types/node@22.10.2)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)))':
+  '@vitest/coverage-v8@2.1.8(vitest@2.1.8(@types/node@25.6.0)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2)))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -2945,7 +2945,7 @@ snapshots:
       std-env: 3.10.0
       test-exclude: 7.0.2
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@types/node@22.10.2)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))
+      vitest: 2.1.8(@types/node@25.6.0)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -2956,14 +2956,14 @@ snapshots:
       chai: 5.3.3
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.8(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))(vite@5.4.21(@types/node@22.10.2)(lightningcss@1.32.0))':
+  '@vitest/mocker@2.1.8(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2))(vite@5.4.21(@types/node@25.6.0)(lightningcss@1.32.0))':
     dependencies:
       '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      msw: 2.7.0(@types/node@22.10.2)(typescript@5.7.2)
-      vite: 5.4.21(@types/node@22.10.2)(lightningcss@1.32.0)
+      msw: 2.7.0(@types/node@25.6.0)(typescript@5.7.2)
+      vite: 5.4.21(@types/node@25.6.0)(lightningcss@1.32.0)
 
   '@vitest/pretty-format@2.1.8':
     dependencies:
@@ -3596,12 +3596,12 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2):
+  msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
-      '@inquirer/confirm': 5.1.21(@types/node@22.10.2)
+      '@inquirer/confirm': 5.1.21(@types/node@25.6.0)
       '@mswjs/interceptors': 0.37.6
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/until': 2.1.0
@@ -4005,7 +4005,7 @@ snapshots:
 
   typescript@5.7.2: {}
 
-  undici-types@6.20.0: {}
+  undici-types@7.19.2: {}
 
   universalify@0.2.0: {}
 
@@ -4022,13 +4022,13 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-node@2.1.8(@types/node@22.10.2)(lightningcss@1.32.0):
+  vite-node@2.1.8(@types/node@25.6.0)(lightningcss@1.32.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 1.1.2
-      vite: 5.4.21(@types/node@22.10.2)(lightningcss@1.32.0)
+      vite: 5.4.21(@types/node@25.6.0)(lightningcss@1.32.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4040,20 +4040,20 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.4.21(@types/node@22.10.2)(lightningcss@1.32.0):
+  vite@5.4.21(@types/node@25.6.0)(lightningcss@1.32.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.12
       rollup: 4.60.2
     optionalDependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
       fsevents: 2.3.3
       lightningcss: 1.32.0
 
-  vitest@2.1.8(@types/node@22.10.2)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)):
+  vitest@2.1.8(@types/node@25.6.0)(jsdom@25.0.1)(lightningcss@1.32.0)(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2)):
     dependencies:
       '@vitest/expect': 2.1.8
-      '@vitest/mocker': 2.1.8(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))(vite@5.4.21(@types/node@22.10.2)(lightningcss@1.32.0))
+      '@vitest/mocker': 2.1.8(msw@2.7.0(@types/node@25.6.0)(typescript@5.7.2))(vite@5.4.21(@types/node@25.6.0)(lightningcss@1.32.0))
       '@vitest/pretty-format': 2.1.9
       '@vitest/runner': 2.1.8
       '@vitest/snapshot': 2.1.8
@@ -4069,11 +4069,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.1.1
       tinyrainbow: 1.2.0
-      vite: 5.4.21(@types/node@22.10.2)(lightningcss@1.32.0)
-      vite-node: 2.1.8(@types/node@22.10.2)(lightningcss@1.32.0)
+      vite: 5.4.21(@types/node@25.6.0)(lightningcss@1.32.0)
+      vite-node: 2.1.8(@types/node@25.6.0)(lightningcss@1.32.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.10.2
+      '@types/node': 25.6.0
       jsdom: 25.0.1
     transitivePeerDependencies:
       - less
